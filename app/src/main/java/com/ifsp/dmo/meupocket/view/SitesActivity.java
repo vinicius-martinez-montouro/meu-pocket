@@ -65,7 +65,11 @@ public class SitesActivity extends AppCompatActivity{
         //siteList = SiteDao.recuperateAll();
         mSharedPreferences = this.getPreferences(MODE_PRIVATE);
 
-        recuperaUsuarios();
+        recuperaSites();
+        adicionaSitesView();
+    }
+
+    private void adicionaSitesView(){
         siteAdapter = new ItemSiteAdapter(siteList);
 
         sitesRecyclerView.setAdapter(siteAdapter);
@@ -79,7 +83,6 @@ public class SitesActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
-
     }
 
     private String corrigeEndereco(String endereco) {
@@ -113,11 +116,12 @@ public class SitesActivity extends AppCompatActivity{
     protected void onResume() {
         //Carrega a fonte de dados
 //        siteList = SiteDao.recuperateAll();
-        recuperaUsuarios();
+        recuperaSites();
+        adicionaSitesView();
         super.onResume();
     }
 
-    private void recuperaUsuarios(){
+    private void recuperaSites(){
         String sites = mSharedPreferences
                 .getString(getString(R.string.key_sites_db), "");
         JSONObject jsonObject = new JSONObject();

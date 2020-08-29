@@ -38,8 +38,8 @@ public class NovoSite extends AppCompatActivity implements View.OnClickListener{
         enderecoSiteEditText = findViewById(R.id.edittext_endereco);
         salvarButton = findViewById(R.id.button_salvar);
         salvarButton.setOnClickListener(this);
-        mSharedPreferences =
-                this.getSharedPreferences(getString(R.string.sites_cadastrodos), MODE_PRIVATE);
+       // mSharedPreferences =
+       //         this.getSharedPreferences(getString(R.string.sites_cadastrodos), MODE_PRIVATE);
         mEditor = mSharedPreferences.edit();
 
     }
