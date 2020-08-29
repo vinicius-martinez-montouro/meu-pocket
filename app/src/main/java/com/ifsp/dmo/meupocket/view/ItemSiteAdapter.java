@@ -91,6 +91,8 @@ public class ItemSiteAdapter extends RecyclerView.Adapter<ItemSiteAdapter.SitesV
     */
     @Override
     public int getItemCount() {
+        if(siteList == null)
+            return 0;
         return siteList.size();
     }
     /*

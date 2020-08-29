@@ -115,7 +115,7 @@ public class SitesActivity extends AppCompatActivity{
     @Override
     protected void onResume() {
         //Carrega a fonte de dados
-//        siteList = SiteDao.recuperateAll();
+        //siteList = SiteDao.recuperateAll();
         recuperaSites();
         adicionaSitesView();
         super.onResume();
